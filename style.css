@@ -1,0 +1,65 @@
+{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style the header*/
+header {
+    background-color: aqua;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: blue;
+}
+
+/create two columns/boxes that floats next to each/
+nav{
+    float: left;
+    width: 30%;
+    height: 300px; /only for demonstration, should be/
+    background-color: aqua;   
+    padding: 20px;
+}
+
+/style the list inside the menu/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left; 
+    padding: 20px;
+    width: 70%;
+    background-color: beige;
+    height: 300px /* only demonstration, should be*/
+
+}
+
+/* Clear floats after the columns*/
+section::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+footer{
+    
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes st*/
+media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
